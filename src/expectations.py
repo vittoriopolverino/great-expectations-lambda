@@ -1,7 +1,8 @@
 import pandas as pd
-from ruamel import yaml
-import great_expectations as ge
 from great_expectations.core.batch import RuntimeBatchRequest
+from ruamel import yaml
+
+import great_expectations as ge
 
 
 def init_datasource() -> dict:
@@ -43,20 +44,18 @@ def run(data: dict[str, list[str]]) -> list[dict]:
     )
 
     context.create_expectation_suite(
-        expectation_suite_name="test_suite",
-        overwrite_existing=True
+        expectation_suite_name="test_suite", overwrite_existing=True
     )
     validator = context.get_validator(
-        batch_request=batch_request,
-        expectation_suite_name="test_suite"
+        batch_request=batch_request, expectation_suite_name="test_suite"
     )
 
     print(validator.head())
 
     expectations_result = [
         validator.expect_table_row_count_to_be_between(min_value=4),
-        validator.expect_column_values_to_be_unique(column='test_column'),
-        validator.expect_column_values_to_not_be_null(column='test_column')
+        validator.expect_column_values_to_be_unique(column="test_column"),
+        validator.expect_column_values_to_not_be_null(column="test_column"),
     ]
 
     return expectations_result
