@@ -1,3 +1,2 @@
 import expectations
-import lambda_function
 import lambda_function_local

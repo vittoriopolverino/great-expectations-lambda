@@ -1,12 +1,12 @@
+import os
+import sys
+
 from lambda_local.context import Context
 from lambda_local.main import call
 
-import os
-import sys
 # setting path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import lambda_function
-
 
 # test-event
 event = {"payload": {"test_column": ["red", "yellow", "blue", "green"]}}

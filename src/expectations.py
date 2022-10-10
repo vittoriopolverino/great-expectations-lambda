@@ -38,7 +38,7 @@ def run(data: dict[str, list[str]]) -> list[dict]:
     batch_request = RuntimeBatchRequest(
         datasource_name="example_datasource",
         data_connector_name="default_runtime_data_connector_name",
-        data_asset_name="data_asset_test",  # This can be anything that identifies this data_asset for you
+        data_asset_name="data_asset_test",
         runtime_parameters={"batch_data": df},  # df is your dataframe
         batch_identifiers={"default_identifier_name": "default_identifier"},
     )
