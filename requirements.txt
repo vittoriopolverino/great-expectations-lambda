@@ -1,0 +1,5 @@
+great_expectations
+python-lambda-local
+ruamel.yaml
+rx==1.6.1
+pandas
