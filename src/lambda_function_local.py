@@ -3,6 +3,7 @@ from lambda_local.main import call
 
 import os
 import sys
+# setting path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import lambda_function
 
