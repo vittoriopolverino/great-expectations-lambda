@@ -1,5 +1,5 @@
-# Lambda Container Image
-AWS Lambda container image
+# Great Expectations Lambda
+Great Expectations Lambda
 
 ## 📜 Table of Contents
 - [About](#about)
