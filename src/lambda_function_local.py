@@ -8,7 +8,7 @@ from lambda_local.main import call
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import lambda_function
 
-# test-event
+# test event
 event = {"payload": {"test_column": ["red", "yellow", "blue", "green"]}}
 
 # timeout in seconds (60)
