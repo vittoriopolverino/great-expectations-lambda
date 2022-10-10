@@ -30,7 +30,7 @@ pipenv install --dev
 ## 💻 Usage <a name="usage"></a>
 to do
 ```
-pipenv run wordcount
+pipenv run
 ```
 
 <br />
@@ -45,11 +45,11 @@ pipenv run test
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 - [Python](https://www.python.org/) | Programming language
-- [Pipenv](https://pipenv.pypa.io/en/latest/) | Virtualenv and packaging
-- [Docker]() | Containerization and Deploy
-- [Pre-Commit]() | Managing and maintaining hooks
-- [python-lambda-local]() | Run lambda function on local machine
+- [Pipenv](https://pipenv.pypa.io/en/latest/) | Dependency management
+- [Pre-Commit](https://pre-commit.com/) | Managing and maintaining hooks
 - [Github Actions](https://github.com/features/actions) | CI/CD
+- [Docker](https://www.docker.com/) | Containerization and Deploy
+- [python-lambda-local](https://github.com/HDE/python-lambda-local) | Run AWS lambda function on local machine
 
 <br />
 
