@@ -1,6 +1,6 @@
 from time import gmtime, strftime
+
 import pandas as pd
-from great_expectations.checkpoint import SimpleCheckpoint
 from great_expectations.core.batch import RuntimeBatchRequest
 from ruamel import yaml
 
@@ -46,8 +46,7 @@ def run(data: dict[str, list[str]]) -> None:
     )
 
     context.create_expectation_suite(
-        expectation_suite_name=expectation_suite_name,
-        overwrite_existing=True
+        expectation_suite_name=expectation_suite_name, overwrite_existing=True
     )
 
     context.create_expectation_suite(
@@ -68,18 +67,18 @@ def run(data: dict[str, list[str]]) -> None:
         "config_version": 1,
         "class_name": "SimpleCheckpoint",
         "expectation_suite_name": expectation_suite_name,
-        "run_name_template": f"test-run-{strftime('%Y-%m-%d-%H-%M-%S', gmtime())}"
+        "run_name_template": f"test-run-{strftime('%Y-%m-%d-%H-%M-%S', gmtime())}",
     }
     context.add_checkpoint(**checkpoint_config)
 
     checkpoint_result = context.run_checkpoint(
         checkpoint_name=checkpoint_name,
-        validations=[
-            {"batch_request": batch_request}
-        ],
+        validations=[{"batch_request": batch_request}],
     )
 
-    validation_result_identifier = checkpoint_result.list_validation_result_identifiers()[0]
+    validation_result_identifier = (
+        checkpoint_result.list_validation_result_identifiers()[0]
+    )
 
     context.build_data_docs()
     context.open_data_docs(resource_identifier=validation_result_identifier)
