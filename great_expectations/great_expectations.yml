@@ -14,41 +14,18 @@ config_version: 3.0
 # You can use the CLI command `great_expectations datasource new` to help you
 # add a new datasource. Read more at https://docs.greatexpectations.io/en/latest/reference/core_concepts/datasource.html
 datasources:
-  s3_datasource:
-    execution_engine:
-      class_name: PandasExecutionEngine
-      module_name: great_expectations.execution_engine
-    module_name: great_expectations.datasource
-    class_name: Datasource
-    data_connectors:
-      default_runtime_data_connector_name:
-        name: default_runtime_data_connector_name
-        batch_identifiers:
-          - default_identifier_name
-        module_name: great_expectations.datasource.data_connector
-        class_name: RuntimeDataConnector
-      default_inferred_data_connector_name:
-        name: default_inferred_data_connector_name
-        bucket: playground-brumbrum-data-warehouse
-        prefix: curated-zone
-        default_regex:
-          pattern: (.*)\.parquet
-          group_names:
-            - data_asset_name
-        module_name: great_expectations.datasource.data_connector
-        class_name: InferredAssetS3DataConnector
   example_datasource:
     execution_engine:
-      class_name: PandasExecutionEngine
       module_name: great_expectations.execution_engine
+      class_name: PandasExecutionEngine
     module_name: great_expectations.datasource
-    class_name: Datasource
     data_connectors:
       default_runtime_data_connector_name:
+        module_name: great_expectations.datasource.data_connector
         batch_identifiers:
           - default_identifier_name
-        module_name: great_expectations.datasource.data_connector
         class_name: RuntimeDataConnector
+    class_name: Datasource
 config_variables_file_path: uncommitted/config_variables.yml
 
 # The plugins_directory will be added to your python path for custom modules
@@ -109,20 +86,13 @@ data_docs_sites:
       base_directory: uncommitted/data_docs/local_site/
     site_index_builder:
       class_name: DefaultSiteIndexBuilder
-  s3_site:
-    class_name: SiteBuilder
-    store_backend:
-      class_name: TupleS3StoreBackend
-      bucket: test-vipo  # UPDATE the bucket name here to match the bucket you configured above.
-    site_index_builder:
-      class_name: DefaultSiteIndexBuilder
       show_cta_footer: false
 
 anonymous_usage_statistics:
-  enabled: true
   data_context_id: d93486bd-2c93-45a1-a4d1-c5b735ca4935
+  enabled: true
 notebooks:
 include_rendered_content:
-  globally: false
   expectation_suite: false
   expectation_validation_result: false
+  globally: false
