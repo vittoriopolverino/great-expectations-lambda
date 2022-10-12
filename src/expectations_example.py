@@ -1,11 +1,10 @@
 from time import gmtime, strftime
 
-from pandas import DataFrame
 from great_expectations.core.batch import RuntimeBatchRequest
+from pandas import DataFrame
 from ruamel import yaml
 
 import great_expectations as ge
-
 
 DATA_ASSET_NAME = "my_data_asset"
 EXPECTATION_SUITE_NAME = "my_expectation_suite"
@@ -62,13 +61,11 @@ def run(dataframe: DataFrame) -> None:
 
     # Define a new expectation suite
     context.create_expectation_suite(
-        expectation_suite_name=EXPECTATION_SUITE_NAME,
-        overwrite_existing=True
+        expectation_suite_name=EXPECTATION_SUITE_NAME, overwrite_existing=True
     )
 
     validator = context.get_validator(
-        batch_request=batch_request,
-        expectation_suite_name=EXPECTATION_SUITE_NAME
+        batch_request=batch_request, expectation_suite_name=EXPECTATION_SUITE_NAME
     )
 
     validator.expect_table_row_count_to_be_between(min_value=1, max_value=4),
