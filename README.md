@@ -50,8 +50,8 @@ pipenv run test
 - [Github Actions](https://github.com/features/actions) | CI/CD
 - [Docker](https://www.docker.com/) | Containerization and Deploy
 - [python-lambda-local](https://github.com/HDE/python-lambda-local) | Run AWS lambda function on local machine
-- [great_expectations]() | Data Quality
-- [AWS lambda function]() | Serverless compute service
+- [great_expectations](https://greatexpectations.io/) | Data Quality tool
+- [AWS lambda function](https://aws.amazon.com/lambda/) | Serverless compute service
 
 <br />
 
