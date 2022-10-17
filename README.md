@@ -1,5 +1,5 @@
 # Great Expectations Lambda
-Great Expectations Lambda
+Build a serverless and event-driven data quality system with AWS Lambda and Great Expectations
 
 ## 📜 Table of Contents
 - [About](#about)
@@ -12,16 +12,24 @@ Great Expectations Lambda
 <br />
 
 ## 🧐 About <a name = "about"></a>
-Great Expectations (GE) is an open-source data quality framework based on Python. GE enables engineers to write tests, review reports, and assess the quality of data. It is a plugable tool, meaning you can easily add new expectations and customize final reports.
+**Great Expectations** is an open-source data quality framework based on Python. GE enables engineers to write tests, review reports, and assess the quality of data. 
+It is a plugable tool, meaning you can easily add new expectations and customize final reports.
 
+**AWS Lambda** is a serverless, event-driven compute service that lets you run code for virtually any type of application or backend service without provisioning or managing servers.
+
+Unfortunately, AWS Lambda imposes certain quotas and limits on the size of the deployment package:
+- **50 MB** (zipped, for direct upload) 
+- **250 MB** (unzipped). This quota applies to all the files you upload, including layers and custom runtimes.
+
+As a result, deploying GE on lambda takes some ingenuity. However,
+we can solve this problem packaging and deploying Lambda functions as container images of up to **10 GB** in size
 <br />
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
-Use the Pipfile to install packages in the virtualenv:
+Install packages in the virtualenv:
 
 ```
-pipenv install
 pipenv install --dev
 ```
 
@@ -52,6 +60,7 @@ pipenv run test
 - [python-lambda-local](https://github.com/HDE/python-lambda-local) | Run AWS lambda function on local machine
 - [great_expectations](https://greatexpectations.io/) | Data Quality tool
 - [AWS lambda function](https://aws.amazon.com/lambda/) | Serverless compute service
+- [Unix shell]() | Command-line interpreter
 
 <br />
 
