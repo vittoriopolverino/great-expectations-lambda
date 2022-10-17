@@ -14,7 +14,7 @@ docker_run() {
 }
 
 docker_exec() {
-  echo "Invoking the lambda function in the container . . ."
+  echo "Running the lambda function . . ."
   winpty docker exec -it lambda-container bash -c "python src/lambda_function_local.py"
 }
 

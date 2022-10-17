@@ -12,7 +12,7 @@ Great Expectations Lambda
 <br />
 
 ## 🧐 About <a name = "about"></a>
-to do
+Great Expectations (GE) is an open-source data quality framework based on Python. GE enables engineers to write tests, review reports, and assess the quality of data. It is a plugable tool, meaning you can easily add new expectations and customize final reports.
 
 <br />
 
