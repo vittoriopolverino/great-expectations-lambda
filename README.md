@@ -68,7 +68,9 @@ Go to the exported folder and open the ```index.html``` file
 
 ## 🚀 Deploy <a name = "deploy"></a>
 I personally recommend [Serverless](https://www.serverless.com/) to deploy lambda functions.
-Alternatively, in the ```infra``` folder you can find a Terraform example to create the AWS infrastructure and in the ```script``` folder an example to tag and push the docker image to Amazon ECR
+Alternatively, in the ```infra``` folder you can find a Terraform example to create the AWS infrastructure. 
+
+I've also added a script example to tag and push the docker image to **Amazon ECR** and automatically update the lambda code with the newly pushed images.
 
 ```
 script/naive_deploy.sh
