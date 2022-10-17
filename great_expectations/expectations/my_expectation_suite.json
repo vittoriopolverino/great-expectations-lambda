@@ -28,7 +28,7 @@
       "expectation_type": "expect_column_distinct_values_to_be_in_set",
       "kwargs": {
         "column": "test_column",
-        "value_set": ["red", "yellow"]
+        "value_set": ["red", "yellow", "blue", "green"]
       },
       "meta": {}
     }
