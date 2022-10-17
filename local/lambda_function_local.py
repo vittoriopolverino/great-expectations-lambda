@@ -5,7 +5,6 @@ import sys
 from lambda_local.context import Context
 from lambda_local.main import call
 
-# setting path
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import lambda_function
