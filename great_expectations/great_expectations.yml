@@ -15,17 +15,17 @@ config_version: 3.0
 # add a new datasource. Read more at https://docs.greatexpectations.io/en/latest/reference/core_concepts/datasource.html
 datasources:
   example_datasource:
-    execution_engine:
-      module_name: great_expectations.execution_engine
-      class_name: PandasExecutionEngine
-    module_name: great_expectations.datasource
     data_connectors:
       default_runtime_data_connector_name:
-        module_name: great_expectations.datasource.data_connector
+        class_name: RuntimeDataConnector
         batch_identifiers:
           - default_identifier_name
-        class_name: RuntimeDataConnector
+        module_name: great_expectations.datasource.data_connector
     class_name: Datasource
+    execution_engine:
+      class_name: PandasExecutionEngine
+      module_name: great_expectations.execution_engine
+    module_name: great_expectations.datasource
 config_variables_file_path: uncommitted/config_variables.yml
 
 # The plugins_directory will be added to your python path for custom modules
@@ -89,10 +89,10 @@ data_docs_sites:
       show_cta_footer: false
 
 anonymous_usage_statistics:
-  data_context_id: d93486bd-2c93-45a1-a4d1-c5b735ca4935
   enabled: true
+  data_context_id: d93486bd-2c93-45a1-a4d1-c5b735ca4935
 notebooks:
 include_rendered_content:
+  globally: false
   expectation_suite: false
   expectation_validation_result: false
-  globally: false

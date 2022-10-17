@@ -1,8 +1,9 @@
 FROM public.ecr.aws/lambda/python:3.9
 
-# Copy function code
 COPY lambda_function.py ${LAMBDA_TASK_ROOT}
 COPY src ${LAMBDA_TASK_ROOT}/src
+COPY test/lambda_function_local.py ${LAMBDA_TASK_ROOT}/src
+COPY test/event.json ${LAMBDA_TASK_ROOT}
 COPY great_expectations ${LAMBDA_TASK_ROOT}/great_expectations
 
 # Install the function's dependencies using file requirements.txt from your project folder.
