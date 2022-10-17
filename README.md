@@ -37,8 +37,6 @@ pipenv install --dev
 <br />
 
 ## 💻 Usage <a name="usage"></a>
-
-### 👀  Pre-requisites ###
 Make sure to have Docker installed
 ```
 docker --version
