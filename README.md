@@ -1,5 +1,5 @@
-# Great Expectations Lambda
-Build a serverless and event-driven data quality system with AWS Lambda and Great Expectations
+# 🧙 Great Expectations Lambda
+A serverless and event-driven approach to build data quality pipeline with AWS Lambda and Great Expectations
 
 ## 📜 Table of Contents
 - [About](#about)
@@ -21,8 +21,9 @@ Unfortunately, AWS Lambda imposes certain quotas and limits on the size of the d
 - **50 MB** (zipped, for direct upload) 
 - **250 MB** (unzipped). This quota applies to all the files you upload, including layers and custom runtimes.
 
-As a result, deploying GE on lambda takes some ingenuity. However,
+As a result, deploying GE on lambda takes some ingenuity. Despite this,
 we can solve this problem packaging and deploying Lambda functions as container images of up to **10 GB** in size
+
 <br />
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
