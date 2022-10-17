@@ -1,6 +1,8 @@
 # 🧙 Great Expectations Lambda
 A serverless and event-driven approach to build data quality pipeline with AWS Lambda and Great Expectations
 
+<br />
+
 ## 📜 Table of Contents
 - [About](#about)
 - [Getting Started](#getting_started)
