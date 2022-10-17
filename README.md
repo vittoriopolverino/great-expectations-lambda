@@ -23,8 +23,7 @@ Unfortunately, AWS Lambda imposes certain quotas and limits on the size of the d
 - **50 MB** (zipped, for direct upload) 
 - **250 MB** (unzipped). This quota applies to all the files you upload, including layers and custom runtimes.
 
-As a result, deploying GE on lambda takes some ingenuity. Despite this,
-we can solve this problem packaging and deploying Lambda functions as container images of up to **10 GB** in size
+As a result, deploying GE on lambda takes some ingenuity. However, we can solve this problem by packaging and deploying Lambda functions as container images of up to **10 GB** in size
 
 <br />
 
