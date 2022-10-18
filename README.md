@@ -85,8 +85,9 @@ script/naive_deploy.sh
 - [Github Actions](https://github.com/features/actions) | CI/CD
 - [Terraform](https://www.terraform.io/) | Infrastructure as Code
 - [Docker](https://www.docker.com/) | Containerization and Deploy
-- [python-lambda-local](https://github.com/HDE/python-lambda-local) | Run AWS lambda function on local machine
-- [great_expectations](https://greatexpectations.io/) | Data Quality tool
+- [Pandas](https://pandas.pydata.org/) | Data analysis and manipulation
+- [python-lambda-local](https://github.com/HDE/python-lambda-local) | Run AWS lambda functions on local machine
+- [great_expectations](https://greatexpectations.io/) | Data Quality framework
 - [AWS lambda function](https://aws.amazon.com/lambda/) | Serverless compute service
 - [Unix shell]() | Command-line interpreter
 
